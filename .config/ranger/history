@@ -1,0 +1,41 @@
+open_with photos
+open_with photos.exe
+shell code. %s
+rename c
+rename rc.conf
+delete rc.conf
+open_with hhljhhhhhzh
+open_with ljjjjjjjkkkkkkjjj
+1
+cd prog
+zh
+search tmux
+open_with zh
+search zsh
+search vi
+search agnoster
+gc
+q
+search 
+search buffer
+rename init.vim
+fi
+rename node_modules
+search .jrn_config
+search .conf
+search .con
+%nvim .tmux
+%nvim .tmux.conf
+%s nvim .tmux.conf
+@
+shell 
+shell nvim .tmux.conf %s
+find hghgh
+search vi-mode
+open_with ljj
+search nvim
+open_with 
+
+wq
+delete
+search test
