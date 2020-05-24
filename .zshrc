@@ -3,6 +3,14 @@
 ZSH_DISABLE_COMPFIX=true
 # Path to your oh-my-zsh installation.
 export ZSH="/home/adictya/.oh-my-zsh"
+export PATH="/home/adictya/:$PATH"
+export EDITOR="nvim"
+
+# VIMODE ENDHANCEMENTS
+
+export KEYTIMEOUT=1
+
+# END HERE
 
 zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 # load a random theme each time oh-my-zsh is loaded, in which case,

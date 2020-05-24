@@ -28,15 +28,12 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Unmanaged plugin (manually installed and updated)
 
 Plug 'kana/vim-fakeclip'
-
+Plug 'easymotion/vim-easymotion',
 Plug 'junegunn/goyo.vim'
 
 Plug 'junegunn/limelight.vim'
 
 Plug 'tpope/vim-surround'
-
-Plug 'yuttie/comfortable-motion.vim'
-
 Plug 'tpope/vim-commentary'
 
 Plug 'wellle/targets.vim'
@@ -73,6 +70,8 @@ noremap "+p :exe 'norm a'.system('/mnt/c/Windows/System32/WindowsPowerShell/v1.0
 
 nnoremap ; :
 nnoremap : ;
+
+map s <Plug>(easymotion-s2)
 
 command EndOfLine normal!$
 

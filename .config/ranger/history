@@ -1,17 +1,9 @@
-shell code. %s
-rename c
-rename rc.conf
-delete rc.conf
-open_with hhljhhhhhzh
-open_with ljjjjjjjkkkkkkjjj
-1
 cd prog
 zh
 search tmux
 open_with zh
 delete
 search zsh
-search vi
 search agnoster
 gc
 q
@@ -38,7 +30,6 @@ search test
 search ['n
 search env
 n
-
 shell
 echo $SHELL
 echo %SHELL
@@ -47,4 +38,13 @@ shell echo
 cd ~
 rename bookmarksQ
 reload
+help rename
+commands
+help
+rename 
+cd 
+rename corona.sh
+rename corona
 wq
+search vi
+
