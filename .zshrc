@@ -5,7 +5,8 @@ ZSH_DISABLE_COMPFIX=true
 export ZSH="/home/adictya/.oh-my-zsh"
 export PATH="/home/adictya/:$PATH"
 export EDITOR="nvim"
-
+# AUTOCOMPLETE REBIND 
+bindkey '^l' autosuggest-accept
 # VIMODE ENDHANCEMENTS
 
 export KEYTIMEOUT=1
@@ -109,6 +110,8 @@ alias fm="ranger"
 alias vc="nvim /home/adictya/.config/nvim/init.vim"
 alias gp="cd /mnt/d/Libraries/programing"
 alias reload='source ~/.zshrc'
+alias c="clear"
+alias q="exit"
 eval $(thefuck --alias)
 alias Q="exit"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

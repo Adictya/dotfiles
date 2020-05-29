@@ -26,7 +26,6 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Unmanaged plugin (manually installed and updated)
-
 Plug 'kana/vim-fakeclip'
 Plug 'easymotion/vim-easymotion',
 Plug 'junegunn/goyo.vim'
@@ -71,6 +70,7 @@ noremap "+p :exe 'norm a'.system('/mnt/c/Windows/System32/WindowsPowerShell/v1.0
 nnoremap ; :
 nnoremap : ;
 
+
 map s <Plug>(easymotion-s2)
 
 command EndOfLine normal!$
@@ -98,10 +98,8 @@ function! s:goyo_leave()
         endif
     endif
 endfunction
-
 colorscheme gruvbox
 set background=dark
-
 " Remap HJKL to arrow in Normal Mode
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
@@ -111,5 +109,6 @@ cnoremap <C-h> <Left>
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
-
-
+" Map C-A to calculate expression on cursor line
+inoremap <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
+nnoremap <C-A> i<C-O>diW<End><C-R>=<C-R>0<CR>

@@ -1,8 +1,3 @@
-cd prog
-zh
-search tmux
-open_with zh
-delete
 search zsh
 search agnoster
 gc
@@ -25,11 +20,9 @@ find hghgh
 search vi-mode
 open_with ljj
 search nvim
-open_with 
 search test
 search ['n
 search env
-n
 shell
 echo $SHELL
 echo %SHELL
@@ -45,6 +38,13 @@ rename
 cd 
 rename corona.sh
 rename corona
-wq
 search vi
+wq
+search vim
+search vimgolf
+open_with j
 
+delete
+open_with 
+open_with nvim
+n
