@@ -1,62 +1,66 @@
 
 call plug#begin('~/.vim/plugged')
+
 Plug 'edkolev/tmuxline.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-" Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" Using a non-master branch
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Unmanaged plugin (manually installed and updated)
 Plug 'kana/vim-fakeclip'
 Plug 'easymotion/vim-easymotion',
 Plug 'junegunn/goyo.vim'
-
 Plug 'junegunn/limelight.vim'
-
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-
 Plug 'wellle/targets.vim'
-
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-
 Plug 'morhetz/gruvbox'
 
 call plug#end()
 
+" Basic stup
 set noswapfile
 set incsearch
 set nowrap
 set undodir=~/.vim/undodir
 set undofile
 
-let g:airline#extensions#tmuxline#enabled = 0
+nnoremap ; :
+nnoremap : ;
+
+" Remap ctrl+HJKL to arrow in Insert Mode
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+cnoremap <C-h> <Left>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-l> <Right>
+
+" Map C-A to calculate expression on cursor line
+inoremap <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
+nnoremap <C-A> i<C-O>diW<End><C-R>=<C-R>0<CR>
+
+" Remap s to Easymotion 2-Word Search
+map s <Plug>(easymotion-s2)
 
 " let g:tmuxline_theme = 'iceberg'
+let g:airline#extensions#tmuxline#enabled = 0
 
-let g:go_version_warning=0
+" Set default register to + which is the linux clipboard
+set clipboard:unnamedplus
 
+" Sync Windows clipboard with wsl clipboard
 let s:clip = '/mnt/c/Windows/System32/clip.exe' 
+
 
 if executable(s:clip)
     augroup WSLYank
@@ -67,18 +71,16 @@ end
 
 noremap "+p :exe 'norm a'.system('/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -Command Get-Clipboard')<CR>
 
-nnoremap ; :
-nnoremap : ;
 
-
-map s <Plug>(easymotion-s2)
+" Remove version warning at startup
+let g:go_version_warning=0
 
 command EndOfLine normal!$
 
+" Disable wrapping
 command! -nargs=* Wrap set wrap linebreak nolist
 
-set clipboard:unnamedplus
-
+" Goyo setup 
 let g:goyo_width = 120
 function! s:goyo_enter()
     execute ‘Limelight’
@@ -98,17 +100,3 @@ function! s:goyo_leave()
         endif
     endif
 endfunction
-colorscheme gruvbox
-set background=dark
-" Remap HJKL to arrow in Normal Mode
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-cnoremap <C-h> <Left>
-cnoremap <C-j> <Down>
-cnoremap <C-k> <Up>
-cnoremap <C-l> <Right>
-" Map C-A to calculate expression on cursor line
-inoremap <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
-nnoremap <C-A> i<C-O>diW<End><C-R>=<C-R>0<CR>

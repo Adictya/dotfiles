@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
+# My aliases
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nivm ~/.oh-my-zsh"
 alias fm="ranger"
