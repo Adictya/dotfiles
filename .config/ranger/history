@@ -1,4 +1,3 @@
-search agnoster
 gc
 q
 search 
@@ -42,9 +41,10 @@ wq
 search vim
 search vimgolf
 open_with j
-
 open_with 
 n
 open_with nvim
 delete
 w
+
+rename wininit.vim
