@@ -1,0 +1,5 @@
+#!/bin/sh
+
+["$(stat -c %y ~/.cache/corona | cut -d' ' -f1)" != "$(date = '+%Y-%m-%d')"] &&  curl -s https://corona-stats.online/india | head -7 > /home/adictya/.cache/corona
+# curl -s https://corona-stats.online/india
+cat .cache/corona
