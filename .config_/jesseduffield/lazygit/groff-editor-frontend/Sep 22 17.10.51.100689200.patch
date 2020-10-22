@@ -1,0 +1,10 @@
+--- a/src/containers/home.js
++++ b/src/containers/home.js
+@@ -43,6 +43,7 @@ class Home extends Component {
+ 							className="LoaderIcon"
+ 						/>
+ 						<span className="LoaderText">Loading..</span>
++					</div>
+ 			</div>
+ 		);
+ 	}

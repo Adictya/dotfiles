@@ -1,0 +1,10 @@
+--- a/src/context/MyProvider.js
++++ b/src/context/MyProvider.js
+@@ -10,7 +10,6 @@ class MyProvider extends Component {
+ 		this.token = localStorage.getItem("token");
+ 		this.userId = localStorage.getItem("user-id");
+ 		// this.apiUrl = "https://groffapi.dscvit.com/";
+-		console.log(options.apiUrl);
+ 		this.apiUrl = "http://localhost:3000/";
+ 	}
+ 	state = {

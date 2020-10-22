@@ -1,0 +1,12 @@
+reporting: "on"
+startuppopupversion: 1
+gui:
+    theme:
+        lightTheme: false
+        # activeBorderColor:
+        #     - black
+        #     - bold
+        # inactiveBorderColor:
+        #     - black
+        selectedLineBgColor:
+            - reverse

@@ -1,0 +1,9 @@
+--- a/src/context/MyProvider.js
++++ b/src/context/MyProvider.js
+@@ -1,6 +1,5 @@
+ import MyContext from "./MyContext";
+ import React, { Component } from "react";
+-import options from "../options";
+ 
+ // Backend Integration: Add route to fetch all documents(Name , Created Time, Id)
+ // Optimization: Add Fucntion to refresh database

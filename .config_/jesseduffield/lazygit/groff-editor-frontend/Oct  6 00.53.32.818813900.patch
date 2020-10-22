@@ -1,0 +1,24 @@
+--- a/src/components/Navbar/navbar.js
++++ b/src/components/Navbar/navbar.js
+@@ -78,20 +78,21 @@ class Navbar extends Component {
+ 								this.renameHandler(e);
+ 							}}
+ 						/>
+ 						<ReactToPdf
+ 							targetRef={this.props.toPrint}
+ 							filename={this.props.children + ".pdf"}
++						<button
+ 						>
+ 							{({ toPdf }) => (
+ 								<button
+ 									className={classes.ExportButton}
+ 									onClick={toPdf}
+ 								>
+ 									Export to pdf
+ 								</button>
+ 							)}
+ 						</ReactToPdf>
+ 
+ 						<div
+ 							className={classes.Settings}
+ 							onClick={() => {

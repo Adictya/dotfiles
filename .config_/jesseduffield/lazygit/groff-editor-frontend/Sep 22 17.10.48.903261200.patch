@@ -1,0 +1,10 @@
+--- a/src/containers/home.js
++++ b/src/containers/home.js
+@@ -38,6 +38,7 @@ class Home extends Component {
+ 				{!this.context.loaded ? (
+ 					<div className="loader">
+ 						<img
++							src={Loader}
+ 			</div>
+ 		);
+ 	}
